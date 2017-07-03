@@ -68,6 +68,7 @@ module Dox
 
       def parse_request_body
         body = request.body.read
+        binding.pry
         return body if body.blank?
         valid_json?(body) ? JSON.parse(body) : Rack::Utils.parse_nested_query(body)
       end
