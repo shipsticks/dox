@@ -1,3 +1,5 @@
+require 'rack'
+
 module Dox
   module Entities
     class Example
